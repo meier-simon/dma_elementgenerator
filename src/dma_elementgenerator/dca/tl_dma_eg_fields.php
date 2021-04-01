@@ -128,7 +128,8 @@ $GLOBALS['TL_DCA']['tl_dma_eg_fields'] = array
 		'listWizard'	=> '{type_legend},type,label,title,explanation;{input_legend},eval_mandatory,eval_allow_html;{style_legend},eval_tl_class;{subpalette_legend:hide},useCheckboxCondition;{expert_legend:hide},exclude,eval_unique,eval_do_not_copy,class,template',
 	    'tableWizard'	=> '{type_legend},type,label,title,explanation;{input_legend},eval_mandatory,eval_allow_html;{style_legend},eval_tl_class;{subpalette_legend:hide},useCheckboxCondition;{expert_legend:hide},exclude,eval_unique,eval_do_not_copy,class,template',
 	    'hyperlink'		=> '{type_legend},type,label,title,explanation;{input_legend},hyperlink_data;{subpalette_legend:hide},useCheckboxCondition;{expert_legend:hide},exclude,class,template',
-	    'image'			=>	'{type_legend},type,label,title,explanation;{input_legend},image_data;{subpalette_legend:hide},useCheckboxCondition;{expert_legend:hide},exclude,class,template'
+	    'image'			=>	'{type_legend},type,label,title,explanation;{input_legend},image_data;{subpalette_legend:hide},useCheckboxCondition;{expert_legend:hide},exclude,class,template',
+		'multiColumnWizard' => '{type_legend},type,label,title,explanation;{input_legend},eval_mandatory;{style_legend},eval_tl_class;{subpalette_legend:hide},useCheckboxCondition;{expert_legend:hide},exclude,class,template'
 	),
 
 	// Subpalettes
@@ -520,6 +521,12 @@ $GLOBALS['TL_DCA']['tl_dma_eg_fields'] = array
         )
 	)
 );
+
+
+if (in_array('multicolumnwizard', $this->Config->getActiveModules()))
+{
+	$GLOBALS['TL_DCA']['tl_dma_eg_fields']['fields']['type']['options'][] = 'multiColumnWizard';
+}
 
 
 class tl_dma_eg_fields extends Backend

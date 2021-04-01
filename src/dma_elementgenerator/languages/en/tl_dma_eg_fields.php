@@ -52,7 +52,8 @@
                                                               'checkbox' => 'Checkboxes',
                                                               'radio' => 'Radiobuttons',
                                                               'pageTree' => 'Page selection',
-                                                              'fileTree' => 'File selection'
+                                                              'fileTree' => 'File selection',
+                                                              'multiColumnWizard' => 'Multicolumn Wizard'
                                                             );
   $GLOBALS['TL_LANG']['tl_dma_eg_fields']['label'] = array('Label','Label of the field, shown in formular');
   $GLOBALS['TL_LANG']['tl_dma_eg_fields']['title'] = array('Field name','Unique name for database');

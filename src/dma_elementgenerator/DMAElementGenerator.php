@@ -689,6 +689,11 @@ class DMAElementGenerator extends \Frontend
 
 			}
 
+            // Handling von MultiColumnWizard
+            if ($objField->type == 'multiColumnWizard') {
+                $arrTemplateData[$objField->title]['value'] = deserialize($arrData[$objField->title]);
+            }
+
 			if ($arrTemplateData[$objField->title]['value'])
 			{
 

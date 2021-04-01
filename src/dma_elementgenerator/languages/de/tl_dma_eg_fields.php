@@ -59,7 +59,8 @@
                                                               'listWizard' => 'Liste',
                                                               'tableWizard' => 'Tabelle',
                                                               'hyperlink' => 'Hyperlink',
-                                                              'image' => 'Bild'
+                                                              'image' => 'Bild',
+                                                              'multiColumnWizard' => 'Multicolumn-Wizard',
                                                             );
   $GLOBALS['TL_LANG']['tl_dma_eg_fields']['label'] = array('Beschriftung','Beschriftung des Feldes, erscheint im Formular');
   $GLOBALS['TL_LANG']['tl_dma_eg_fields']['hidden'] = array('Den nachfolgenden Block initial ausblenden','Soll der nachfolgende Block zunächst ausgeblendet werden?');
