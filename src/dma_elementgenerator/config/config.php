@@ -72,10 +72,3 @@ if(version_compare(VERSION.BUILD, '3.10','>=') && version_compare(VERSION.BUILD,
 }
 
 $GLOBALS['TL_HOOKS']['loadLanguageFile'][] = array('DMA\DMAElementGenerator','dmaEgLoadLanguageFile');
-
-/**
- * Local settings
- */
-if (file_exists(TL_ROOT . '/system/config/module-multicolumnwizard.php')) {
-    include_once(TL_ROOT . '/system/config/module-multicolumnwizard.php');
-}
