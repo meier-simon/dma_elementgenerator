@@ -609,7 +609,7 @@ class DMAElementGenerator extends \Frontend
                     }
                 }
 
-				$arrImagePrecompiled = $arrImage;
+				//$arrImagePrecompiled = $arrImage;
 				// file-handling for Contao 3
 				
 				if (is_numeric($arrImage['singleSRC']))
@@ -639,7 +639,7 @@ class DMAElementGenerator extends \Frontend
                         $arrTemplateData[$objField->title]['meta'] = deserialize($objFile->meta);
                     }
 					$arrTemplateData[$objField->title]['value'] = $objFile->path;
-					$arrImagePrecompiled['singleSRC'] = $objFile->path;
+					//$arrImagePrecompiled['singleSRC'] = $objFile->path;
 				}
 
                 elseif (\Validator::isUuid($arrImage['singleSRC']))
@@ -668,7 +668,7 @@ class DMAElementGenerator extends \Frontend
                             $arrTemplateData[$objField->title]['meta'] = deserialize($objFile->meta);
                         }
                         $arrTemplateData[$objField->title]['value'] = $objFile->path;
-                        $arrImagePrecompiled['singleSRC'] = $objFile->path;
+                        //$arrImagePrecompiled['singleSRC'] = $objFile->path;
                     }
                 }
 
@@ -679,13 +679,13 @@ class DMAElementGenerator extends \Frontend
                 }
 
                 //$objFieldTemplate->class = $objFieldTemplate->class ? ($objFieldTemplate->class . " " . $arrImage['floating']) : $arrImage['floating'];
-                if ($arrImagePrecompiled['singleSRC'])
-                {
-                    $this->addImageToTemplate($objFieldTemplate, $arrImagePrecompiled);
-                    $arrImage['type'] = 'image';
-                    $objImage = new dmaContentImageHelper($arrImage);
-                    $arrElements[$objField->title] = $objImage->generate();
-                }
+                //if ($arrImagePrecompiled['singleSRC'])
+                //{
+                    //$this->addImageToTemplate($objFieldTemplate, $arrImagePrecompiled);
+                    //$arrImage['type'] = 'image';
+                    //$objImage = new dmaContentImageHelper($arrImage);
+                    //$arrElements[$objField->title] = $objImage->generate();
+                //}
 
 			}
 
